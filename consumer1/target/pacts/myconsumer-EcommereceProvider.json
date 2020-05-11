@@ -7,7 +7,39 @@
   },
   "interactions": [
     {
-      "description": "get Product list",
+      "description": "get product list by HP",
+      "request": {
+        "method": "GET",
+        "path": "/app/manufacturers/name/HP"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "manufacturerVOs": [
+            {
+              "manufacturerId": "5679",
+              "manufacturerName": "HP",
+              "manufacturerAddress": "Bangalore",
+              "productsList": [
+                {
+                  "productId": "1009",
+                  "productName": "ProBook",
+                  "productType": "Laptop",
+                  "price": 83000.0
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "providerStates": [
+        {
+          "name": "HP"
+        }
+      ]
+    },
+    {
+      "description": "get Product list by Apple",
       "request": {
         "method": "GET",
         "path": "/app/manufacturers/name/Apple"
@@ -23,13 +55,13 @@
               "productsList": [
                 {
                   "productId": "1007",
-                  "productName": "Apple Mack book Pro",
+                  "productName": "Apple MacBook Pro",
                   "productType": "Laptop",
                   "price": 90000.0
                 },
                 {
                   "productId": "1008",
-                  "productName": "mack book Air",
+                  "productName": "MacBook Air",
                   "productType": "Laptop",
                   "price": 75000.0
                 }
